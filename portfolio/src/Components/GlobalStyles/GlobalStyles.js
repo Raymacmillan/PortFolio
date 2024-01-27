@@ -2,17 +2,19 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
-   body {
+    * {
         margin: 0;
         padding: 0;
 
         box-sizing: border-box;
+    }
+   body {
 
-        background: ${({theme}) => theme.backgroundColor};
-
-        font-family: "Merriweather", serif;
+        background: ${({ theme }) => theme.backgroundColor};
 
         width: 100%;
+        
+        font-family: "Inter", "open sans";
 
 
     transition: ease-in-out 250ms;

@@ -1,4 +1,4 @@
-import { Container, LocationInfo, Information, Location, GlobeImg, Globe, Header, SubHeader, ArrowContainer, Arrow } from "./landingPageStyles";
+import { Container, LocationInfo, Information, Location, GlobeImg, Globe, Page, Header, SubHeader, ArrowContainer, Arrow } from "./landingPageStyles";
 
 function LandingPage({changeGlobeTheme, changeArrowTheme}) {
     return (
@@ -13,7 +13,7 @@ function LandingPage({changeGlobeTheme, changeArrowTheme}) {
             </LocationInfo>
             <Page>
                 <Header>RAY MCMILLAN GUMBO</Header>
-                <SubHeader>SOFTWARE ENGINEER, FRONT END & ETHICAL HACKER.</SubHeader>
+                <SubHeader>SOFTWARE ENGINEER, FRONT END & BACK END.</SubHeader>
                 <ArrowContainer>
                     <Arrow src={changeArrowTheme} alt="Arrow"/>
                 </ArrowContainer>

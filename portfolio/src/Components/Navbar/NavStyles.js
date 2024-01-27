@@ -17,7 +17,7 @@ export const Navbar = styled.nav`
 
     padding: 15px;
 
-    background: ${({ theme }) => theme.navBackground};
+
 
 
     @media(width <= 768px) {
@@ -30,7 +30,7 @@ export const UList = styled.ul`
     align-items: center;
     justify-content: center;
 
-    gap: 10px;
+    gap: 20px;
 
     list-style: none;
 
@@ -41,26 +41,20 @@ export const UList = styled.ul`
         align-items: flex-start;
 
         position: absolute;
-        bottom: -35px;
+        top: 90px;
         left: 0;
 
-        transform: translate(0,100%);
-       
-        & div {
-            width: 100vw;
-            height: 1px;
 
-            background-color: ${({ theme }) => theme.fontColor};
-
-            margin-left: -38px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
+    color: ${({ theme }) => theme.phoneFontColor};
     }
    
 `;
 
 export const ListElement = styled.li`
+
+font-family: "Merriweather", serif;
+
+font-size: 1.2rem;
 
 
 transition: ease-in-out 250ms;
@@ -89,7 +83,7 @@ cursor: pointer;
 `;
 
 export const ThemeToggle = styled.img`
-  width: 40px;
+  width: 38px;
   height: 35px;
 
   transition: ease-in-out 250ms;
@@ -102,7 +96,7 @@ export const ThemeToggle = styled.img`
   
   @media(width <= 768px) {
     position: absolute;
-        bottom: -310px;
+        bottom: 50px;
         left: 40px;
   }
 
@@ -112,16 +106,17 @@ export const Menu = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 100px;
     
     @media(width <= 768px) {
         position: absolute;
-        bottom: 0;
+        top: 0;
         left: 0;
-        
-        transform: translate(0,100%);
+
         width: 100vw;
-        height: 0;
+        height: 100vh;
+
+        background-color: ${({theme}) => theme.phoneBackgroundColor};
     }
 `;
 
@@ -131,6 +126,9 @@ height: 55px;
 margin-right: 30px;
 transition: ease-in-out 250ms;
 
+position: absolute;
+right: 10px;
+
 &:hover {
     background-color: rgba(0,0,0,0.4);
 
@@ -138,6 +136,7 @@ transition: ease-in-out 250ms;
 }
 
 @media(width > 768px) {
+    
     display: none;
 }
 `;
