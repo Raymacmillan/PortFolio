@@ -10,8 +10,8 @@ import { useState } from 'react';
 import Nav from './Components/Navbar/Nav';
 import GlobalStyles from './Components/GlobalStyles/GlobalStyles';
 import Qualification from "./Components/ Certifications/Certification";
-import MyExpertise from "./Components/Expertise/Expertise";
-
+import Skills from "./Components/Expertise/Skills";
+import Projects from "./Components/Projects/Projects";
 
 function App() {
   const theme = {
@@ -56,8 +56,9 @@ function App() {
         <GlobalStyles />
         <Nav changeTheme={changeTheme} currentThemeLogo={currentTheme === "dark" ? BrandLogo : BrandLogo2} />
         <LandingPage changeGlobeTheme={currentTheme === "dark" ? GlobeImg : GlobeImg2} changeArrowTheme={currentTheme === "dark" ? ArrowImg : ArrowImg2} />
+        <Skills />
         <Qualification />
-        <MyExpertise />
+        <Projects />
       </>
     </ThemeProvider>
   );

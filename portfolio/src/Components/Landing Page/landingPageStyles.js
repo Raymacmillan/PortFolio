@@ -14,7 +14,7 @@ export const Container = styled.div`
 
     @media(width <= 768px) {
         justify-content: center;
-        margin-top: 200px;
+        margin-top: 50px;
     }
 
 

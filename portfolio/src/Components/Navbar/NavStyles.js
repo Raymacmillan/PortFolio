@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 
+
 export const Navbar = styled.nav`
     position: relative;
     display: flex;
@@ -9,13 +10,15 @@ export const Navbar = styled.nav`
 
     gap: 100px;
 
+    width: 100vw;
+
     position: fixed;
     top: 0;
     left: 0;
 
-    width: 100%;
-
     padding: 15px;
+
+    z-index: 100;
 
 
 
@@ -24,6 +27,7 @@ export const Navbar = styled.nav`
         justify-content: space-between;
     }
 `;
+
 
 export const UList = styled.ul`
     display: flex;
@@ -42,8 +46,8 @@ export const UList = styled.ul`
 
         position: absolute;
         top: 90px;
-        left: 0;
-
+        left: 15px;
+        
 
     color: ${({ theme }) => theme.phoneFontColor};
     }
@@ -59,9 +63,9 @@ font-size: 1.2rem;
 
 transition: ease-in-out 250ms;
 
-  cursor: pointer;
-  
-  &:hover {
+cursor: pointer;
+
+&:hover {
       ${({ theme }) =>
         theme.isDark ? 'color: #333333;' : 'color: #FCFCFD;'
     };
@@ -71,7 +75,7 @@ transition: ease-in-out 250ms;
         theme.isDark ? 'color: #333333;' : 'color: #333333;'
     };
     }
-  }
+}
 
 `;
 
@@ -92,15 +96,15 @@ export const ThemeToggle = styled.img`
         theme.isDark ? 'filter: brightness(0) invert(1);' : 'filter: brightness(1) invert(0);'
     };
 
-  cursor: pointer;
-  
-  @media(width <= 768px) {
+cursor: pointer;
+
+@media(width <= 768px) {
     position: absolute;
         bottom: 50px;
-        left: 40px;
-  }
+        left: 15px;
+    }
 
-`;
+    `;
 
 export const Menu = styled.div`
     display: flex;
@@ -112,10 +116,10 @@ export const Menu = styled.div`
         position: absolute;
         top: 0;
         left: 0;
-
+        
         width: 100vw;
         height: 100vh;
-
+        
         background-color: ${({theme}) => theme.phoneBackgroundColor};
     }
 `;
@@ -140,3 +144,4 @@ right: 10px;
     display: none;
 }
 `;
+
