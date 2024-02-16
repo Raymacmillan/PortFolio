@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { MyProjects, Header } from "./ProjectsStyles";
+import { MyProjects, Header, HeaderContainer, Source, GithubImg } from "./ProjectsStyles";
+import GitHubLogo from "./github.png";
 import Calculator from "./Calculator.png";
 import Etch from "./etch.png";
 import Library from "./library.png";
@@ -144,7 +145,12 @@ function Projects() {
     ])
     return (
         <>
+            <HeaderContainer>
             <Header>Dive into my domain</Header>
+            <Source href="https://github.com/Raymacmillan?tab=repositories">
+                <GithubImg src={GitHubLogo} alt="GitHubLogo"/>
+            </Source>
+            </HeaderContainer>
             <MyProjects>
                 {project.map((pro) => (
                     <Project key={pro.id} href={pro.liveLink} linkRef={pro.link} ImgURL={pro.ImgURL} title={pro.title} tech={pro.tech}></Project>

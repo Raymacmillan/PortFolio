@@ -12,6 +12,7 @@ import GlobalStyles from './Components/GlobalStyles/GlobalStyles';
 import Qualification from "./Components/ Certifications/Certification";
 import Skills from "./Components/Expertise/Skills";
 import Projects from "./Components/Projects/Projects";
+import { ContactUs } from "./Components/Contact/Contact";
 
 function App() {
   const theme = {
@@ -59,6 +60,7 @@ function App() {
         <Skills />
         <Qualification />
         <Projects />
+        <ContactUs />
       </>
     </ThemeProvider>
   );

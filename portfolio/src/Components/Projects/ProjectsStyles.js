@@ -31,3 +31,33 @@ export const Header = styled.h1`
 
     margin-top: 50px;
 `;
+
+export const HeaderContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+
+    @media(width <= 768px) {
+      gap: 15px;
+    }
+`;
+
+export const Source = styled.a`
+    text-decoration: none; 
+    
+    cursor: pointer;
+
+    margin-top: 48px;
+`;
+
+export const GithubImg = styled.img`
+    width: 50px;
+    height: 50px;
+
+    @media(width <= 768px) {
+        width: 30px;
+        height: 30px;
+    }
+`;

@@ -2,7 +2,7 @@ import { Navbar, Logo, ThemeToggle, UList, ListElement, Menu, HamburgerMenu } fr
 import ThemeLogo from "./themes.png";
 import DarkMenu from "./darkMenu.png";
 import CloseWindow from "./closeWindow.png";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import useGetWindowSize from "./useGetWindoSize";
 import useGetScrollY from "./useGetScrollY";
 
@@ -11,7 +11,6 @@ function Nav({ changeTheme, currentThemeLogo }) {
     const [showMenu, setShowMenu] = useState(false);
     const screenSize = useGetWindowSize();
     const scrollYValue = useGetScrollY();
-
     const handleIsOpen = () => {
         setIsOpen(!isOpen);
         setShowMenu(!showMenu);
@@ -28,11 +27,11 @@ function Nav({ changeTheme, currentThemeLogo }) {
             <Logo src={currentThemeLogo} alt="Logo" />
             {(showMenu || screenSize > 768) && <Menu>
                 <UList>
-                    <ListElement>Home</ListElement>
-                    <ListElement>My Expertise</ListElement>
-                    <ListElement>Certifications</ListElement>
-                    <ListElement>Projects</ListElement>
-                    <ListElement>Contact</ListElement>
+                    <ListElement id="home">Home</ListElement>
+                    <ListElement id="expertise">My Expertise</ListElement>
+                    <ListElement id="certifications">Certifications</ListElement>
+                    <ListElement id="projects">Projects</ListElement>
+                    <ListElement id="contacts">Contact</ListElement>
                 </UList>
                 <ThemeToggle onClick={changeTheme} src={ThemeLogo} alt="Theme" />
             </Menu>}
@@ -40,5 +39,4 @@ function Nav({ changeTheme, currentThemeLogo }) {
         </Navbar>
     )
 }
-
 export default Nav;
