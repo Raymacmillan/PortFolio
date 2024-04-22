@@ -56,6 +56,13 @@ export const GithubImg = styled.img`
     width: 50px;
     height: 50px;
 
+
+    transition: all ease-in-out 250ms;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+
     @media(width <= 768px) {
         width: 30px;
         height: 30px;

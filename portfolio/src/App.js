@@ -13,6 +13,7 @@ import Qualification from "./Components/ Certifications/Certification";
 import Skills from "./Components/Expertise/Skills";
 import Projects from "./Components/Projects/Projects";
 import { ContactUs } from "./Components/Contact/Contact";
+import { Footer } from "./Components/FooterSection/Footer";
 
 function App() {
   const theme = {
@@ -26,6 +27,7 @@ function App() {
       phoneBackgroundColor: "#70A9A1",
       locationColor: "#9EC1A3",
       locationFontColor: "#1F363D",
+      FooterBackground: "#212121"
     },
 
     light: {
@@ -38,6 +40,7 @@ function App() {
       locationColor: "#272727",
       phoneBackgroundColor: "#9EC1A3",
       locationFontColor: "#40798C",
+      FooterBackground: "#e0e0e0"
     }
   }
   const [currentTheme, setCurrentTheme] = useState("dark");
@@ -61,6 +64,7 @@ function App() {
         <Qualification />
         <Projects />
         <ContactUs />
+        <Footer />
       </>
     </ThemeProvider>
   );
